@@ -1,6 +1,6 @@
-const Reactotron = require('reactotron-react-native').default
-const errorPlugin = require('reactotron-react-native').trackGlobalErrors
-const apisaucePlugin = require('reactotron-apisauce')
+const Reactotron = require('reactotron-react-native').default;
+const errorPlugin = require('reactotron-react-native').trackGlobalErrors;
+const apisaucePlugin = require('reactotron-apisauce');
 
 if (__DEV__) {
   Reactotron
@@ -20,7 +20,7 @@ if (__DEV__) {
     .use(apisaucePlugin())
 
     // let's connect!
-    .connect()
+    .connect();
 
   // Totally hacky, but this allows you to not both importing reactotron-react-native
   // on every file.  This is just DEV mode, so no big deal.

@@ -12,7 +12,7 @@ if (__DEV__) {
 }
 
 // create our store
-const store = createStore()
+const store = createStore();
 
 /**
  * Provides an entry point into our application.  Both index.ios.js and index.android.js

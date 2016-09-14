@@ -1,4 +1,4 @@
-import PushNotification from 'react-native-push-notification'
+import PushNotification from 'react-native-push-notification';
 
 // https://github.com/zo0r/react-native-push-notification
 PushNotification.configure({
@@ -35,4 +35,4 @@ PushNotification.configure({
     * This example app shows how to best call requestPermissions() later.
     */
   requestPermissions: false
-})
+});

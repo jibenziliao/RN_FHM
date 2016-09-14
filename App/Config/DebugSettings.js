@@ -4,6 +4,6 @@ const SETTINGS = {
   yellowBox: __DEV__,
   reduxLogging: true,
   includeExamples: __DEV__
-}
+};
 
 export default SETTINGS

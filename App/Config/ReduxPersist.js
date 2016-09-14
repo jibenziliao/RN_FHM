@@ -10,6 +10,6 @@ const REDUX_PERSIST = {
     whitelist: [], // OR put reducer keys that you DO want stored to persistence here (overrides blacklist)
     transforms: [immutablePersistenceTransform]
   }
-}
+};
 
 export default REDUX_PERSIST
