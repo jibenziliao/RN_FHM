@@ -11,8 +11,8 @@ import Styles from './Styles/NavigationDrawerStyle'
 
 class NavigationDrawer extends Component {
   render () {
-    const state = this.props.navigationState
-    const children = state.children
+    const state = this.props.navigationState;
+    const children = state.children;
     return (
       <Drawer
         ref='navigation'
@@ -38,16 +38,16 @@ class NavigationDrawer extends Component {
 
 NavigationDrawer.propTypes = {
   navigationState: PropTypes.object
-}
+};
 
 const mapStateToProps = (state) => {
   return {
   }
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {
   }
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(NavigationDrawer)

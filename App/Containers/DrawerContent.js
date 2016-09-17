@@ -12,29 +12,29 @@ class DrawerContent extends Component {
   }
 
   handlePressComponents = () => {
-    this.toggleDrawer()
+    this.toggleDrawer();
     NavigationActions.componentExamples()
-  }
+  };
 
   handlePressUsage = () => {
-    this.toggleDrawer()
+    this.toggleDrawer();
     NavigationActions.usageExamples()
-  }
+  };
 
   handlePressAPI = () => {
-    this.toggleDrawer()
+    this.toggleDrawer();
     NavigationActions.apiTesting()
-  }
+  };
 
   handlePressTheme = () => {
-    this.toggleDrawer()
+    this.toggleDrawer();
     NavigationActions.theme()
-  }
+  };
 
   handlePressDevice = () => {
-    this.toggleDrawer()
+    this.toggleDrawer();
     NavigationActions.deviceInfo()
-  }
+  };
 
   render () {
     return (
@@ -53,6 +53,6 @@ class DrawerContent extends Component {
 
 DrawerContent.contextTypes = {
   drawer: React.PropTypes.object
-}
+};
 
 export default DrawerContent

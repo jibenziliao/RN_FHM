@@ -16,15 +16,18 @@ class RootContainer extends Component {
   render () {
     return (
       <View style={styles.applicationView}>
-        <StatusBar barStyle='light-content' />
+        <StatusBar barStyle="light-content"
+                   backgroundColor="rgba(113,94,47,0.7)"
+                   animated={true}
+                   translucent={true}/>
         <NavigationRouter />
       </View>
     )
   }
 }
 
-const mapStateToDispatch = dispatch => ({
+const mapDispatchToProps = dispatch => ({
   startup: () => dispatch(StartupActions.startup())
-})
+});
 
-export default connect(null, mapStateToDispatch)(RootContainer)
+export default connect(null, mapDispatchToProps)(RootContainer)
