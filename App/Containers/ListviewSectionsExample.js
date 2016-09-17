@@ -44,7 +44,7 @@ class ListviewSectionsExample extends React.Component {
         {title: '20th Title', description: '20th Description'},
         {title: 'BLACKJACK!', description: 'BLACKJACK! Description'}
       ]
-    }
+    };
     /* ***********************************************************
     * STEP 2
     * Teach datasource how to detect if rows are different
@@ -110,7 +110,7 @@ class ListviewSectionsExample extends React.Component {
   _renderHeader (data, sectionID) {
     switch (sectionID) {
       case 'first':
-        return <Text style={styles.boldLabel}>First Section</Text>
+        return <Text style={styles.boldLabel}>First Section</Text>;
       default:
         return <Text style={styles.boldLabel}>Second Section</Text>
     }

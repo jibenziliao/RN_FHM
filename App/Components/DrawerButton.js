@@ -10,7 +10,7 @@ ExamplesRegistry.add('Drawer Button', () =>
     text='Example left drawer button'
     onPress={() => window.alert('Your drawers are showing')}
   />
-)
+);
 
 class DrawerButton extends Component {
   render () {
@@ -25,6 +25,6 @@ class DrawerButton extends Component {
 DrawerButton.propTypes = {
   text: PropTypes.string.isRequired,
   onPress: PropTypes.func.isRequired
-}
+};
 
 export default DrawerButton

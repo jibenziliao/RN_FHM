@@ -16,42 +16,42 @@ const HARDWARE_DATA = [
   {title: 'User Agent', info: DeviceInfo.getUserAgent()},
   {title: 'Screen Width', info: Metrics.screenWidth},
   {title: 'Screen Height', info: Metrics.screenHeight}
-]
+];
 
 const OS_DATA = [
   {title: 'Device System Name', info: DeviceInfo.getSystemName()},
   {title: 'Device ID', info: DeviceInfo.getDeviceId()},
   {title: 'Device Version', info: DeviceInfo.getSystemVersion()}
-]
+];
 
 const APP_DATA = [
   {title: 'Bundle Id', info: DeviceInfo.getBundleId()},
   {title: 'Build Number', info: DeviceInfo.getBuildNumber()},
   {title: 'App Version', info: DeviceInfo.getVersion()},
   {title: 'App Version (Readable)', info: DeviceInfo.getReadableVersion()}
-]
+];
 
 export default class DeviceInfoScreen extends React.Component {
   constructor (props) {
-    super(props)
+    super(props);
 
     this.state = {
       isConnected: false,
       connectionInfo: null,
       connectionInfoHistory: []
-    }
+    };
 
-    this.setConnected = this.setConnected.bind(this)
-    this.setConnectionInfo = this.setConnectionInfo.bind(this)
+    this.setConnected = this.setConnected.bind(this);
+    this.setConnectionInfo = this.setConnectionInfo.bind(this);
     this.updateConnectionInfoHistory = this.updateConnectionInfoHistory.bind(this)
   }
 
   componentDidMount () {
-    NetInfo.isConnected.addEventListener('change', this.setConnected)
-    NetInfo.isConnected.fetch().done(this.setConnected)
-    NetInfo.addEventListener('change', this.setConnectionInfo)
-    NetInfo.fetch().done(this.setConnectionInfo)
-    NetInfo.addEventListener('change', this.updateConnectionInfoHistory)
+    NetInfo.isConnected.addEventListener('change', this.setConnected);
+    NetInfo.isConnected.fetch().done(this.setConnected);
+    NetInfo.addEventListener('change', this.setConnectionInfo);
+    NetInfo.fetch().done(this.setConnectionInfo);
+    NetInfo.addEventListener('change', this.updateConnectionInfoHistory);
 
     // an example of how to display a custom Reactotron message
     console.tron.display({
@@ -66,7 +66,7 @@ export default class DeviceInfoScreen extends React.Component {
   }
 
   componentWillUnmount () {
-    NetInfo.isConnected.removeEventListener('change', this.setConnected)
+    NetInfo.isConnected.removeEventListener('change', this.setConnected);
     NetInfo.removeEventListener('change', this.setConnectionInfo)
     NetInfo.removeEventListener('change', this.updateConnectionInfoHistory)
   }
@@ -80,8 +80,8 @@ export default class DeviceInfoScreen extends React.Component {
   }
 
   updateConnectionInfoHistory (connectionInfo) {
-    const connectionInfoHistory = this.state.connectionInfoHistory.slice()
-    connectionInfoHistory.push(connectionInfo)
+    const connectionInfoHistory = this.state.connectionInfoHistory.slice();
+    connectionInfoHistory.push(connectionInfo);
     this.setState({connectionInfoHistory})
   }
 
@@ -104,7 +104,7 @@ export default class DeviceInfoScreen extends React.Component {
 
   renderRows (rowData) {
     return rowData.map((cell) => {
-      const {title, info} = cell
+      const {title, info} = cell;
       return (
         <View key={title} style={styles.rowContainer}>
           <View style={styles.rowLabelContainer}>

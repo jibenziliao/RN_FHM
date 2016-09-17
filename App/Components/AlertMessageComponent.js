@@ -18,13 +18,13 @@ ExamplesRegistry.add('Alert Message', () =>
       show={false}
     />
   </View>
-)
+);
 
 export default class AlertMessage extends React.Component {
   render () {
-    let messageComponent = null
+    let messageComponent = null;
     if (this.props.show) {
-      const { title } = this.props
+      const { title } = this.props;
       return (
         <Animatable.View
           style={[styles.container, this.props.style]}
@@ -52,8 +52,8 @@ AlertMessage.propTypes = {
   title: React.PropTypes.string.isRequired,
   icon: React.PropTypes.string,
   show: React.PropTypes.bool
-}
+};
 
 AlertMessage.defaultProps = {
   show: true
-}
+};

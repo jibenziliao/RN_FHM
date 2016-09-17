@@ -9,7 +9,7 @@ ExamplesRegistry.add('Full Button', () =>
     text='Hey there'
     onPress={() => window.alert('Full Button Pressed!')}
   />
-)
+);
 
 export default class FullButton extends React.Component {
   render () {
@@ -25,4 +25,4 @@ FullButton.propTypes = {
   text: React.PropTypes.string.isRequired,
   onPress: React.PropTypes.func.isRequired,
   styles: React.PropTypes.object
-}
+};

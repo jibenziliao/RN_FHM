@@ -11,7 +11,7 @@ import styles from './Styles/ListviewGridExampleStyle'
 class ListviewGridExample extends React.Component {
 
   constructor (props) {
-    super(props)
+    super(props);
     /* ***********************************************************
     * STEP 1
     * This is an array of objects with the properties you desire
@@ -39,7 +39,7 @@ class ListviewGridExample extends React.Component {
       {title: '19th Title', description: '19th Description'},
       {title: '20th Title', description: '20th Description'},
       {title: 'BLACKJACK!', description: 'BLACKJACK! Description'}
-    ]
+    ];
 
     /* ***********************************************************
     * STEP 2
@@ -118,6 +118,6 @@ const mapStateToProps = (state) => {
   return {
     // ...redux state to props here
   }
-}
+};
 
 export default connect(mapStateToProps)(ListviewGridExample)

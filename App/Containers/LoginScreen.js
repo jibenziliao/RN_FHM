@@ -53,7 +53,7 @@ class LoginScreen extends React.Component {
 
   keyboardDidShow = (e) => {
     // Animation types easeInEaseOut/linear/spring
-    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut)
+    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
     let newSize = Metrics.screenHeight - e.endCoordinates.height;
     this.setState({
       visibleHeight: newSize,
@@ -63,7 +63,7 @@ class LoginScreen extends React.Component {
 
   keyboardDidHide = (e) => {
     // Animation types easeInEaseOut/linear/spring
-    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut)
+    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
     this.setState({
       visibleHeight: Metrics.screenHeight,
       topLogo: {width: Metrics.screenWidth}
