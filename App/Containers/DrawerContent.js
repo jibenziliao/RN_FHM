@@ -13,38 +13,38 @@ class DrawerContent extends Component {
 
   handlePressComponents = () => {
     this.toggleDrawer();
-    NavigationActions.componentExamples()
+    NavigationActions.componentExamples();
   };
 
   handlePressUsage = () => {
     this.toggleDrawer();
-    NavigationActions.usageExamples()
+    NavigationActions.usageExamples();
   };
 
   handlePressAPI = () => {
     this.toggleDrawer();
-    NavigationActions.apiTesting()
+    NavigationActions.apiTesting();
   };
 
   handlePressTheme = () => {
     this.toggleDrawer();
-    NavigationActions.theme()
+    NavigationActions.theme();
   };
 
   handlePressDevice = () => {
     this.toggleDrawer();
-    NavigationActions.deviceInfo()
+    NavigationActions.deviceInfo();
   };
 
   render () {
     return (
       <ScrollView style={styles.container}>
         <Image source={Images.logo} style={styles.logo} />
-        <DrawerButton text='Component Examples' onPress={this.handlePressComponents} />
-        <DrawerButton text='Usage Examples' onPress={this.handlePressUsage} />
-        <DrawerButton text='API Testing' onPress={this.handlePressAPI} />
-        <DrawerButton text='Themes' onPress={this.handlePressTheme} />
-        <DrawerButton text='Device Info' onPress={this.handlePressDevice} />
+        <DrawerButton text='组件示例' onPress={this.handlePressComponents} />
+        <DrawerButton text='示例' onPress={this.handlePressUsage} />
+        <DrawerButton text='API测试' onPress={this.handlePressAPI} />
+        <DrawerButton text='主题' onPress={this.handlePressTheme} />
+        <DrawerButton text='设备信息' onPress={this.handlePressDevice} />
       </ScrollView>
     )
   }

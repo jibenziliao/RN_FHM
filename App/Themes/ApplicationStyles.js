@@ -20,8 +20,7 @@ const ApplicationStyles = {
       right: 0
     },
     container: {
-      flex: 1,
-      paddingTop: Metrics.baseMargin
+      flex: 1
     },
     section: {
       margin: Metrics.section,
@@ -70,6 +69,6 @@ const ApplicationStyles = {
     alignItems: 'center',
     textAlign: 'center'
   }
-}
+};
 
 export default ApplicationStyles

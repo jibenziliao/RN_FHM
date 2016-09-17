@@ -7,16 +7,16 @@ import R from 'ramda'
 import styles from './Styles/ThemeScreenStyle'
 
 // Colors
-const colors = R.keys(Colors)
+const colors = R.keys(Colors);
 // Font Types
-const types = R.keys(Fonts.type)
+const types = R.keys(Fonts.type);
 // Font Styles
-const fontStyles = R.keys(Fonts.style)
+const fontStyles = R.keys(Fonts.style);
 
 export default class UsageExamplesScreen extends React.Component {
 
   constructor (props) {
-    super(props)
+    super(props);
     this.state = {}
   }
 

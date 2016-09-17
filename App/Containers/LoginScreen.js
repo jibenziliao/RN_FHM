@@ -21,18 +21,18 @@ import I18n from 'react-native-i18n'
 class LoginScreen extends React.Component {
 
   constructor (props) {
-    super(props)
+    super(props);
     this.state = {
       username: 'reactnative@infinite.red',
       password: 'password',
       visibleHeight: Metrics.screenHeight,
       topLogo: { width: Metrics.screenWidth }
-    }
+    };
     this.isAttempting = false
   }
 
   componentWillReceiveProps (newProps) {
-    this.forceUpdate()
+    this.forceUpdate();
     // Did the login attempt complete?
     if (this.isAttempting && !newProps.fetching) {
       NavigationActions.pop()
@@ -42,24 +42,24 @@ class LoginScreen extends React.Component {
   componentWillMount () {
     // Using keyboardWillShow/Hide looks 1,000 times better, but doesn't work on Android
     // TODO: Revisit this if Android begins to support - https://github.com/facebook/react-native/issues/3468
-    this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this.keyboardDidShow)
+    this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this.keyboardDidShow);
     this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this.keyboardDidHide)
   }
 
   componentWillUnmount () {
-    this.keyboardDidShowListener.remove()
+    this.keyboardDidShowListener.remove();
     this.keyboardDidHideListener.remove()
   }
 
   keyboardDidShow = (e) => {
     // Animation types easeInEaseOut/linear/spring
     LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut)
-    let newSize = Metrics.screenHeight - e.endCoordinates.height
+    let newSize = Metrics.screenHeight - e.endCoordinates.height;
     this.setState({
       visibleHeight: newSize,
       topLogo: {width: 100, height: 70}
     })
-  }
+  };
 
   keyboardDidHide = (e) => {
     // Animation types easeInEaseOut/linear/spring
@@ -68,28 +68,28 @@ class LoginScreen extends React.Component {
       visibleHeight: Metrics.screenHeight,
       topLogo: {width: Metrics.screenWidth}
     })
-  }
+  };
 
   handlePressLogin = () => {
-    const { username, password } = this.state
-    this.isAttempting = true
+    const { username, password } = this.state;
+    this.isAttempting = true;
     // attempt a login - a saga is listening to pick it up from here.
     this.props.attemptLogin(username, password)
-  }
+  };
 
   handleChangeUsername = (text) => {
     this.setState({ username: text })
-  }
+  };
 
   handleChangePassword = (text) => {
     this.setState({ password: text })
-  }
+  };
 
   render () {
-    const { username, password } = this.state
-    const { fetching } = this.props
-    const editable = !fetching
-    const textInputStyle = editable ? Styles.textInput : Styles.textInputReadonly
+    const { username, password } = this.state;
+    const { fetching } = this.props;
+    const editable = !fetching;
+    const textInputStyle = editable ? Styles.textInput : Styles.textInputReadonly;
     return (
       <ScrollView contentContainerStyle={{justifyContent: 'center'}} style={[Styles.container, {height: this.state.visibleHeight}]}>
         <Image source={Images.logo} style={[Styles.topLogo, this.state.topLogo]} />
@@ -149,18 +149,18 @@ LoginScreen.propTypes = {
   dispatch: PropTypes.func,
   fetching: PropTypes.bool,
   attemptLogin: PropTypes.func
-}
+};
 
 const mapStateToProps = state => {
   return {
     fetching: state.login.fetching
   }
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {
     attemptLogin: (username, password) => dispatch(LoginActions.loginRequest(username, password))
   }
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginScreen)

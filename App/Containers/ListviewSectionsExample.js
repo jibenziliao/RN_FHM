@@ -11,7 +11,7 @@ import styles from './Styles/ListviewExampleStyle'
 class ListviewSectionsExample extends React.Component {
 
   constructor (props) {
-    super(props)
+    super(props);
 
     /* ***********************************************************
     * STEP 1
@@ -52,11 +52,11 @@ class ListviewSectionsExample extends React.Component {
     *   (r1, r2) => r1.id !== r2.id}
     *   The same goes for sectionHeaderHasChanged
     *************************************************************/
-    const rowHasChanged = (r1, r2) => r1 !== r2
-    const sectionHeaderHasChanged = (s1, s2) => s1 !== s2
+    const rowHasChanged = (r1, r2) => r1 !== r2;
+    const sectionHeaderHasChanged = (s1, s2) => s1 !== s2;
 
     // DataSource configured
-    const ds = new ListView.DataSource({rowHasChanged, sectionHeaderHasChanged})
+    const ds = new ListView.DataSource({rowHasChanged, sectionHeaderHasChanged});
 
     // Datasource is always in state
     this.state = {
@@ -137,11 +137,11 @@ const mapStateToProps = (state) => {
   return {
     // ...redux state to props here
   }
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {
   }
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(ListviewSectionsExample)

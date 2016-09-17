@@ -19,8 +19,7 @@ class AllComponentsScreen extends React.Component {
     if (Platform.OS === 'android') {
       return (
         <Text style={styles.sectionText}>
-          Android only: Animations are slow? You are probably running the app in debug mode.
-          It will run more smoothly once your app will be built.
+          调试模式下,动画会有点卡,打包成正式版后,会流畅很多。
         </Text>
       )
     }
@@ -30,17 +29,17 @@ class AllComponentsScreen extends React.Component {
   render () {
     return (
       <View style={styles.mainContainer}>
-        <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
+        <Image source={Images.background}
+               style={styles.backgroundImage}
+               resizeMode='stretch' />
         <ScrollView style={styles.container}>
           <View style={styles.section}>
             {this.renderAndroidWarning()}
             <Text style={styles.sectionText}>
-              Sometimes called a 'Style Guide', or 'Pattern Library', Examples Screen is filled with usage examples
-              of fundamental components for a given application.  Use this merge-friendly way for your team
-              to show/use/test components.  Examples are registered inside each component's file for quick changes and usage identification.
+              这里是样式导航,你可以自定义组件的样式。
             </Text>
             <Text style={styles.subtitle} >
-              All components that register examples will be rendered below:
+              所有已经注册的组件都会在下面渲染出来:
             </Text>
           </View>
 

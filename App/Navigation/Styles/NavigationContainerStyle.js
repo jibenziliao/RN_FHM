@@ -5,15 +5,20 @@ export default {
     flex: 1
   },
   navBar: {
-    backgroundColor: Colors.background
+    backgroundColor: Colors.background,
+    paddingTop:24,
+    height:78
   },
   title: {
-    color: Colors.snow
+    color: Colors.snow,
+    paddingTop:24
   },
   leftButton: {
-    tintColor: Colors.snow
+    tintColor: Colors.snow,
+    paddingTop:24
   },
   rightButton: {
-    color: Colors.snow
+    color: Colors.snow,
+    paddingTop:24
   }
 }
