@@ -17,9 +17,8 @@ class RootContainer extends Component {
     return (
       <View style={styles.applicationView}>
         <StatusBar barStyle="light-content"
-                   backgroundColor="rgba(113,94,47,0.7)"
-                   animated={true}
-                   translucent={true}/>
+                   backgroundColor="rgba(183,140,31,0.7)"
+                   animated={true}/>
         <NavigationRouter />
       </View>
     )
