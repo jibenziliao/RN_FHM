@@ -3,9 +3,10 @@
  * @author keyy/1501718947@qq.com 16/9/18 11:14
  * @description
  */
-import React, {Component} from 'react';
-import {View, Text} from 'react-native';
-import {Actions} from 'react-native-router-flux';
+import React, {Component} from 'react'
+import {View, Text} from 'react-native'
+import Button from 'react-native-button'
+import {Actions} from 'react-native-router-flux'
 
 export default class PageOne extends Component {
   render() {
@@ -13,6 +14,7 @@ export default class PageOne extends Component {
     return (
       <View style={{margin: 128}}>
         <Text onPress={goToPageTwo}>This is PageOne!</Text>
+        <Button onPress={Actions.tabbar}>Go to TabBar page</Button>
       </View>
     )
   }

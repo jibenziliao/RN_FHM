@@ -28,6 +28,7 @@
     "react": "~15.3.0",
     "react-native": "^0.33.0",
     "react-native-animatable": "^0.6.0",
+    "react-native-button": "^1.7.0",
     "react-native-config": "github:skellock/react-native-config#fix-missing-env",
     "react-native-device-info": "^0.9.5",
     "react-native-drawer": "^2.3.0",
