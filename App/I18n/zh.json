@@ -1,1 +1,25 @@
-{}
+{
+  "signIn": "登录",
+  "logOut": "注销",
+  "loginLogoutExampleTitle": "登录/注销 Redux + Sagas 示例",
+  "progressiveImageComponent": "图片进度条",
+  "api": "接口",
+  "locale": "I18n Locale",
+  "rnVectorIcons": "RN Vector Icons",
+  "loginWithFacebook": "Facebook授权登录",
+  "rnAnimatable": "RN动画",
+  "igniteGenerated": "Ignite Generate Screens",
+  "forgotPassword": "忘记密码",
+  "username": "用户名",
+  "password": "密码",
+  "cancel": "取消",
+  "welcome": "欢迎",
+  "login": "登录",
+  "tempIndicator": "F",
+  "componentExamples": "组件示例",
+  "usageExamples": "示例",
+  "apiTesting": "接口测试",
+  "themeSettings": "主题设置",
+  "deviceDetails": "设备详情",
+  "noItems": "没有项目"
+}
