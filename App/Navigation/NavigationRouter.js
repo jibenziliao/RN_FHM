@@ -17,6 +17,9 @@ import APITestingScreen from '../Containers/APITestingScreen'
 import ThemeScreen from '../Containers/ThemeScreen'
 import DeviceInfoScreen from '../Containers/DeviceInfoScreen'
 
+
+import PageOne from '../Containers/PageOne';
+import PageTwo from '../Containers/PageTwo';
 /* **************************
  * Documentation: https://github.com/aksonov/react-native-router-flux
  ***************************/
@@ -25,6 +28,17 @@ class NavigationRouter extends Component {
   render() {
     return (
       <Router>
+        <Scene key="root">
+          <Scene key="pageOne"
+                 component={PageOne}
+                 title="PageOne"
+                 initial={true}/>
+          <Scene key="pageTwo"
+                 component={PageTwo}
+                 title="PageTwo"/>
+        </Scene>
+      </Router>
+      /*<Router>
         <Scene key='drawer'
                component={NavigationDrawer}
                open={false}>
@@ -74,7 +88,7 @@ class NavigationRouter extends Component {
                    title='设备信息'/>
           </Scene>
         </Scene>
-      </Router>
+      </Router>*/
     )
   }
 }

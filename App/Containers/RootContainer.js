@@ -9,6 +9,13 @@ import StartupActions from '../Redux/StartupRedux'
 import styles from './Styles/RootContainerStyle'
 
 class RootContainer extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      selectedTab:'home'
+    };
+  }
+
   componentDidMount () {
     this.props.startup()
   }
