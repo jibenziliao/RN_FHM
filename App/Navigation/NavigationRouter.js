@@ -21,21 +21,21 @@ class NavigationRouter extends Component {
           <Scene key="pageTwo"
                  component={PageTwo}
                  title="PageTwo"/>
-          <Scene key="tabbar" tabs={true} >
+          <Scene key="tabBar" tabs={true}>
             <Scene key="tab1"
                    title="Tab #1"
                    icon={TabIcon}
-                   navigationBarStyle={{backgroundColor:'red'}}
-                   titleStyle={{color:'white'}}>
+                   navigationBarStyle={{backgroundColor: 'red'}}
+                   titleStyle={{color: 'white'}}>
               <Scene key="tab1_1"
                      component={TabView}
                      title="Tab #1_1"
                      onRight={()=>alert("Right button")}
-                     rightTitle="Right" />
+                     rightTitle="Right"/>
               <Scene key="tab1_2"
                      component={TabView}
                      title="Tab #1_2"
-                     titleStyle={{color:'black'}}/>
+                     titleStyle={{color: 'black'}}/>
             </Scene>
             <Scene key="tab2"
                    initial={true}
@@ -61,7 +61,7 @@ class NavigationRouter extends Component {
             <Scene key="tab5"
                    component={TabView}
                    title="Tab #5"
-                   icon={TabIcon} />
+                   icon={TabIcon}/>
           </Scene>
         </Scene>
       </Router>

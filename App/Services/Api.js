@@ -47,7 +47,7 @@ const create = (baseURL = 'http://api.openweathermap.org/data/2.5/') => {
   // Since we can't hide from that, we embrace it by getting out of the
   // way at this level.
   //
-  const getCity = (city) => api.get('weather', {q: city})
+  const getCity = (city) => api.get('weather', {q: city});
 
   // ------
   // STEP 3

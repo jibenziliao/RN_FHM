@@ -10,7 +10,7 @@ import styles from './Styles/RootContainerStyle'
 
 class RootContainer extends Component {
   componentDidMount () {
-    this.props.startup()
+    this.props.startup();
   }
 
   render () {

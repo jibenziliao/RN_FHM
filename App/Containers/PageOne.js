@@ -9,13 +9,16 @@ import Button from 'react-native-button'
 import {Actions} from 'react-native-router-flux'
 
 export default class PageOne extends Component {
+
   render() {
     const goToPageTwo = () => Actions.pageTwo({text: 'Hello World!'});
     return (
       <View style={{margin: 128}}>
         <Text onPress={goToPageTwo}>This is PageOne!</Text>
-        <Button onPress={Actions.tabbar}>Go to TabBar page</Button>
+        <Button onPress={Actions.tabBar}>Go to TabBar page</Button>
       </View>
+
+
     )
   }
 }

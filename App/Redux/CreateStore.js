@@ -1,12 +1,12 @@
-import { createStore, applyMiddleware, compose } from 'redux'
-import { autoRehydrate } from 'redux-persist'
+import {createStore, applyMiddleware, compose} from 'redux'
+import {autoRehydrate} from 'redux-persist'
 import createLogger from 'redux-logger'
 import Config from '../Config/DebugSettings'
 import createSagaMiddleware from 'redux-saga'
 import R from 'ramda'
 import RehydrationServices from '../Services/RehydrationServices'
 import ReduxPersist from '../Config/ReduxPersist'
-import { StartupTypes } from './StartupRedux'
+import {StartupTypes} from './StartupRedux'
 
 // creates the store
 export default (rootReducer, rootSaga) => {
@@ -29,7 +29,7 @@ export default (rootReducer, rootSaga) => {
     // silence these saga-based messages
     // create the logger
     const logger = createLogger({
-      predicate: (getState, { type }) => USE_LOGGING && R.not(R.contains(type, SAGA_LOGGING_BLACKLIST))
+      predicate: (getState, {type}) => USE_LOGGING && R.not(R.contains(type, SAGA_LOGGING_BLACKLIST))
     });
     middleware.push(logger)
   }
@@ -45,7 +45,7 @@ export default (rootReducer, rootSaga) => {
     const reactotronEnhancer = createReactotronEnhancer(console.tron, {
       // you can flag some of your actions as important by returning true here
       isActionImportant: action =>
-        action.type === StartupTypes.STARTUP,
+      action.type === StartupTypes.STARTUP,
 
       // you can flag to completely ignore certain types too... especially the chatty ones
       ignore: [...SAGA_LOGGING_BLACKLIST]
