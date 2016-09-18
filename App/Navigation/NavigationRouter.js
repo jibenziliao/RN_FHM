@@ -53,12 +53,10 @@ class NavigationRouter extends Component {
             <Scene key="tab3"
                    component={TabView}
                    title="Tab #3"
-                   hideTabBar={true}
                    icon={TabIcon}/>
             <Scene key="tab4"
                    component={TabView}
                    title="Tab #4"
-                   hideNavBar={true}
                    icon={TabIcon}/>
             <Scene key="tab5"
                    component={TabView}
