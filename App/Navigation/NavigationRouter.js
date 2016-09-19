@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 import {Scene, Router} from 'react-native-router-flux'
-import PageOne from '../Containers/PageOne';
-import PageTwo from '../Containers/PageTwo';
-import TabIcon from '../Components/TabIcon';
-import TabView from '../Components/TabView';
+import PageOne from '../Containers/PageOne'
+import PageTwo from '../Containers/PageTwo'
+import TabIcon from '../Components/TabIcon'
+import TabView from '../Components/TabView'
 
 /* **************************
  * Documentation: https://github.com/aksonov/react-native-router-flux

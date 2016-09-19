@@ -3,11 +3,11 @@
  * @author keyy/1501718947@qq.com 16/9/18 11:59
  * @description
  */
-import React from 'react';
-import {PropTypes} from "react";
-import {StyleSheet, Text, View} from "react-native";
-import Button from 'react-native-button';
-import {Actions} from 'react-native-router-flux';
+import React from 'react'
+import {PropTypes} from "react"
+import {StyleSheet, Text, View} from "react-native"
+import Button from 'react-native-button'
+import {Actions} from 'react-native-router-flux'
 
 const contextTypes = {
   drawer: React.PropTypes.object,

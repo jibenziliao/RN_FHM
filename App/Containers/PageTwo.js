@@ -3,9 +3,8 @@
  * @author keyy/1501718947@qq.com 16/9/18 11:15
  * @description
  */
-import React, { Component } from 'react';
-import { View, Text } from 'react-native';
-import { Actions } from 'react-native-router-flux';
+import React, { Component } from 'react'
+import { View, Text } from 'react-native'
 
 export default class PageTwo extends Component {
   render() {

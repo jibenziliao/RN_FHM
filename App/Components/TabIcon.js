@@ -3,12 +3,8 @@
  * @author keyy/1501718947@qq.com 16/9/18 11:58
  * @description
  */
-import React, {
-  PropTypes,
-} from 'react';
-import {
-  Text,
-} from 'react-native';
+import React, {PropTypes} from 'react'
+import {Text} from 'react-native'
 
 const propTypes = {
   selected: PropTypes.bool,
@@ -16,7 +12,7 @@ const propTypes = {
 };
 
 const TabIcon = (props) => (
-  <Text style={{ color: props.selected ? 'red' : 'black' }}>
+  <Text style={{color: props.selected ? 'red' : 'black'}}>
     {props.title}
   </Text>
 );
