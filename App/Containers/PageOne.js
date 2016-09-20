@@ -1,5 +1,5 @@
 /**
- *
+ * 示例页面
  * @author keyy/1501718947@qq.com 16/9/18 11:14
  * @description
  */
@@ -16,6 +16,9 @@ export default class PageOne extends Component {
       <View style={{margin: 128}}>
         <Text onPress={goToPageTwo}>This is PageOne!</Text>
         <Button onPress={Actions.tabBar}>Go to TabBar page</Button>
+        <Button onPress={Actions.mapViewExample}>
+          Go to mapViewExample
+        </Button>
       </View>
 
 

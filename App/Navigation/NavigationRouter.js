@@ -4,6 +4,7 @@ import PageOne from '../Containers/PageOne'
 import PageTwo from '../Containers/PageTwo'
 import TabIcon from '../Components/TabIcon'
 import TabView from '../Components/TabView'
+import MapviewExample from '../Containers/MapviewExample'
 
 /* **************************
  * Documentation: https://github.com/aksonov/react-native-router-flux
@@ -21,6 +22,9 @@ class NavigationRouter extends Component {
           <Scene key="pageTwo"
                  component={PageTwo}
                  title="PageTwo"/>
+          <Scene key="mapViewExample"
+                 component={MapviewExample}
+                 title="mapViewExample"/>
           <Scene key="tabBar" tabs={true}>
             <Scene key="tab1"
                    title="Tab #1"
