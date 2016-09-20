@@ -4,6 +4,7 @@ import MapView from 'react-native-maps'
 import Styles from './Styles/MapCalloutStyle'
 import ExamplesRegistry from '../Services/ExamplesRegistry'
 
+//地图标注组件
 // Example
 ExamplesRegistry.add('Full Button', () =>
   <MapCallout

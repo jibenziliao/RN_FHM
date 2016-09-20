@@ -45,7 +45,7 @@ class MapviewExample extends React.Component {
       locations,
       showUserLocation: true
     };
-    this.renderMapMarkers = this.renderMapMarkers.bind(this)
+    this.renderMapMarkers = this.renderMapMarkers.bind(this);
     this.onRegionChange = this.onRegionChange.bind(this)
   }
 
