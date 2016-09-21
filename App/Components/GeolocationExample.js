@@ -41,7 +41,7 @@ class GeolocationExample extends Component{
   render() {
     return (
       <View>
-        <Button onPress={this.getLocation}>点我开始定位</Button>
+        <Button onPress={()=>{this.getLocation()}}>点我开始定位</Button>
         <Text>
           <Text>Initial position: </Text>
           {this.state.initialPosition}

@@ -43,7 +43,9 @@ class MapviewExample extends React.Component {
     this.state = {
       region,
       locations,
-      showUserLocation: true
+      showUserLocation: true,
+      followsUserLocation:true,
+      showsMyLocationButton:true
     };
     this.renderMapMarkers = this.renderMapMarkers.bind(this);
     this.onRegionChange = this.onRegionChange.bind(this)
@@ -106,6 +108,10 @@ class MapviewExample extends React.Component {
           initialRegion={this.state.region}
           onRegionChangeComplete={this.onRegionChange}
           showsUserLocation={this.state.showUserLocation}
+          followsUserLocation={this.state.followsUserLocation}
+          showsMyLocationButton={this.state.showsMyLocationButton}
+          showsScale
+          toolbarEnabled
         >
           {this.state.locations.map((location) => this.renderMapMarkers(location))}
         </MapView>

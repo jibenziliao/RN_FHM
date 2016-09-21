@@ -11,7 +11,7 @@ export default StyleSheet.create({
   map: {
     // For Android :/
     position: 'absolute',
-    top: 0,
+    top: 54,
     left: 0,
     right: 0,
     bottom: 0
