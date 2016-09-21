@@ -12,39 +12,29 @@ class GeolocationExample extends Component{
     super(props);
     this.state={
       initialPosition: 'unknown',
-      lastPosition: 'unknown',
-      watchID:null
-    }
+      lastPosition: 'unknown'
+    };
   }
 
   componentDidMount() {
     navigator.geolocation.getCurrentPosition(
       (position) => {
         let initialPosition = JSON.stringify(position);
-        this.setState({initialPosition:initialPosition});
+        this.setState({initialPosition});
       },
       (error) => alert(error),
       {enableHighAccuracy: true, timeout: 200000, maximumAge: 1000}
     );
-    this.state.watchID = navigator.geolocation.watchPosition((position) => {
-      var lastPosition = JSON.stringify(position);
-      this.setState({lastPosition:lastPosition});
-    });
-  }
-
-  componentWillUnmount() {
-    navigator.geolocation.clearWatch(this.state.watchID);
   }
 
   getLocation(){
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        alert(position);
         let initialPosition = JSON.stringify(position);
-        this.setState({initialPosition:initialPosition});
+        this.setState({initialPosition});
       },
       (error) => alert(error),
-      {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
+      {enableHighAccuracy: false, timeout: 20000, maximumAge: 1000}
     );
   }
 
