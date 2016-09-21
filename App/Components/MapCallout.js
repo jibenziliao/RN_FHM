@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { Text, TouchableOpacity } from 'react-native'
+import { View,Text, TouchableOpacity } from 'react-native'
 import MapView from 'react-native-maps'
 import Styles from './Styles/MapCalloutStyle'
 import ExamplesRegistry from '../Services/ExamplesRegistry'
@@ -30,7 +30,10 @@ export default class MapCallout extends React.Component {
     return (
       <MapView.Callout style={Styles.callout}>
         <TouchableOpacity onPress={this.onPress}>
-          <Text>{location.title}</Text>
+          <View>
+            <Text>{location.title}</Text>
+            <Text>{location.description}</Text>
+          </View>
         </TouchableOpacity>
       </MapView.Callout>
     )
