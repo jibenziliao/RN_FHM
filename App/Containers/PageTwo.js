@@ -5,13 +5,15 @@
  */
 import React, { Component } from 'react'
 import { View, Text } from 'react-native'
+import GeolocationExample from '../Components/GeolocationExample'
 
 export default class PageTwo extends Component {
   render() {
     return (
-      <View style={{margin: 128}}>
-        <Text>This is PageTwo!</Text>
-        <Text>{this.props.text}</Text>
+      <View style={{marginTop: 109,marginLeft:20,marginRight:20}}>
+        <Text style={{flex:1,textAlign:'center'}}>This is PageTwo!</Text>
+        <Text style={{flex:1,textAlign:'center'}}>{this.props.text}</Text>
+        <GeolocationExample />
       </View>
     )
   }
